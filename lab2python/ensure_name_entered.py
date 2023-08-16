@@ -8,3 +8,18 @@ def entername():
         else:
             print("Inalid Named; please enter only letters...")
 entername()
+
+def validate_email(email):
+    if "@" in email and "." in email:
+        at_index = email.index("@")
+        dot_index = email.index(".")
+        if at_index < dot_index:
+            print("Valid Email; stored successfully")
+        else:
+            print("Invalid Email; please enter a valid email address")
+    else:
+        print("Invalid Email; please enter a valid email address")
+
+while True:
+    email = input("Please, enter your email address: ")
+    validate_email(email)
